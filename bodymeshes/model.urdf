@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<robot name="body_mesh_robot">
+  <link name="baseLink">
+    <visual>
+      <geometry>
+        <mesh filename="bodymeshes/model.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="bodymeshes/model.obj" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

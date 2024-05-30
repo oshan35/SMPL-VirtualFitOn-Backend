@@ -1,0 +1,22 @@
+bpy
+blinker==1.4
+chumpy==0.70
+click==7.1.2
+filelock==3.0.12
+Flask==1.1.2
+fsspec==0.8.7
+importlib-metadata==2.0.0
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+mpmath==1.1.0
+numpy==1.19.5
+opencv-python==4.3.0.38  # Updated to the nearest available version
+scipy==1.4.1
+setuptools==45.2.0
+six==1.15.0
+smplx==0.1.26  # Assuming this version is compatible
+sympy==1.6.2
+torch==1.8.1
+wheel==0.36.2
+zipp==3.4.0
