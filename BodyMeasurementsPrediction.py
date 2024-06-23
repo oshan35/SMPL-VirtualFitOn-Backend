@@ -51,4 +51,6 @@ def getBodyShapeParams(gender, weight, height):
     return shape_params
 
 if __name__ == '__main__':
-    getBodyMeasurements("male", 65, 1.72)
+    #getBodyMeasurements("male", 65, 1.72)
+    params = getBodyShapeParams("male", 140, 1.72)
+    print(params)

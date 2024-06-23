@@ -9,8 +9,9 @@ from models.smpl.smpl_webuser.serialization import load_model
 
 
 
-shape_params = [ 1.05071094 ,0.72027541 ,0.2989638  ,0.05701623 ,0.07447251 ,-0.09911867,
-  0.07585485, -0.05481659, -0.00452416,  0.11355854]
+shape_params = [-0.42180638 ,-4.4476959,  -0.24120857, -0.23960529,  0.17198986,  0.92412074,
+  0.11374407,  0.35836249, -0.06239713, -0.11564543]
+
 def create_model(gender, body_shapes):
     if gender == "male":
         m = load_model('models/smpl/models/basicmodel_m_lbs_10_207_0_v1.0.0.pkl')
@@ -20,7 +21,7 @@ def create_model(gender, body_shapes):
     m.pose[:] = np.zeros((1, m.pose.size))*0.2
     # m.pose[:] = np.random.rand(m.pose.size) * .2
     m.betas[:] = [x * 0.03 for x in body_shapes]
-    outmesh_path = 'bodymeshes/model.obj'
+    outmesh_path = 'bodymeshes/model_fat.obj'
     with open(outmesh_path, 'w') as fp:
         for v in m.r:
             fp.write('v %f %f %f\n' % (v[0], v[1], v[2]))
@@ -31,6 +32,5 @@ def create_model(gender, body_shapes):
 
 
 
-
 if __name__ == '__main__':
-    create_model("female", shape_params)
+    create_model("male", shape_params)
