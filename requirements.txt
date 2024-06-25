@@ -1,8 +1,2 @@
-chumpy==0.70
 Flask
 numpy==1.19.5
-opencv-python==4.9.0.80
-scipy
-smplx
-sympy
-torch

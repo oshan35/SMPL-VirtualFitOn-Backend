@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from BodyMeasurementsPrediction import *
-from BodyMeshGenerater import *
-from Blender import *
+# from BodyMeshGenerater import *
+# from Blender import *
 from Match import *
 
 app = Flask(__name__)
@@ -31,17 +31,17 @@ def bodymeasurements():
 
     return jsonify(body_measurements)
 
-@app.route('/bodymesh', methods=['GET'])  # Corrected here
-def bodymesh():
-    gender = request.args.get('gender', default=None, type=str)
-    height = request.args.get('height', default=None, type=str)
-    weight = request.args.get('weight', default=None, type=str)
-
-    shape_params = getBodyShapeParams(gender, weight, height)
-
-    bodymesh = create_model(gender, shape_params)
-
-    return jsonify(bodymesh)
+# @app.route('/bodymesh', methods=['GET'])  # Corrected here
+# def bodymesh():
+#     gender = request.args.get('gender', default=None, type=str)
+#     height = request.args.get('height', default=None, type=str)
+#     weight = request.args.get('weight', default=None, type=str)
+#
+#     shape_params = getBodyShapeParams(gender, weight, height)
+#
+#     bodymesh = create_model(gender, shape_params)
+#
+#     return jsonify(bodymesh)
 
 
 @app.route('/sizematch', methods=['POST'])
